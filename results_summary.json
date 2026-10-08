@@ -1,0 +1,1090 @@
+{
+  "dataset": "OULAD (Open University Learning Analytics Dataset, 2013-2014, UK Open University)",
+  "data_quality": {
+    "n_rows": {
+      "studentInfo": 32593,
+      "studentAssessment": 173912,
+      "assessments": 206,
+      "courses": 22,
+      "studentRegistration": 32593,
+      "studentVle": 10655280,
+      "vle": 6364
+    },
+    "columns": {
+      "studentInfo": [
+        "code_module",
+        "code_presentation",
+        "id_student",
+        "gender",
+        "region",
+        "highest_education",
+        "imd_band",
+        "age_band",
+        "num_of_prev_attempts",
+        "studied_credits",
+        "disability",
+        "final_result"
+      ],
+      "studentAssessment": [
+        "id_assessment",
+        "id_student",
+        "date_submitted",
+        "is_banked",
+        "score"
+      ],
+      "assessments": [
+        "code_module",
+        "code_presentation",
+        "id_assessment",
+        "assessment_type",
+        "date",
+        "weight"
+      ],
+      "courses": [
+        "code_module",
+        "code_presentation",
+        "module_presentation_length"
+      ],
+      "studentRegistration": [
+        "code_module",
+        "code_presentation",
+        "id_student",
+        "date_registration",
+        "date_unregistration"
+      ],
+      "studentVle": [
+        "code_module",
+        "code_presentation",
+        "id_student",
+        "id_site",
+        "date",
+        "sum_click"
+      ],
+      "vle": [
+        "id_site",
+        "code_module",
+        "code_presentation",
+        "activity_type",
+        "week_from",
+        "week_to"
+      ]
+    },
+    "missing": {
+      "studentInfo": {},
+      "studentAssessment": {},
+      "assessments": {},
+      "courses": {},
+      "studentRegistration": {},
+      "studentVle": {},
+      "vle": {}
+    },
+    "missing_pct": {
+      "studentInfo": {},
+      "studentAssessment": {},
+      "assessments": {},
+      "courses": {},
+      "studentRegistration": {},
+      "studentVle": {},
+      "vle": {}
+    },
+    "exact_duplicates": {
+      "studentInfo": 0,
+      "studentAssessment": 0,
+      "assessments": 0,
+      "courses": 0,
+      "studentRegistration": 0,
+      "studentVle": 787170,
+      "vle": 0
+    },
+    "studentInfo_key_duplicates": 0,
+    "n_rows_after_dedup": {
+      "studentInfo": 32593,
+      "studentAssessment": 173912,
+      "assessments": 206,
+      "courses": 22,
+      "studentRegistration": 32593,
+      "studentVle": 9868110,
+      "vle": 6364
+    },
+    "final_result_dist": {
+      "Pass": 12361,
+      "Withdrawn": 10156,
+      "Fail": 7052,
+      "Distinction": 3024
+    },
+    "final_result_dist_pct": {
+      "Pass": 37.93,
+      "Withdrawn": 31.16,
+      "Fail": 21.64,
+      "Distinction": 9.28
+    },
+    "age_band_dist": {
+      "0-35": 22944,
+      "35-55": 9433,
+      "55<=": 216
+    },
+    "vle_date_min": -25,
+    "vle_date_max": 269,
+    "vle_negative_date_rows": 657160,
+    "vle_negative_date_pct": 6.659,
+    "sum_click_describe": {
+      "count": 9868110.0,
+      "mean": 3.886,
+      "std": 9.163,
+      "min": 1.0,
+      "50%": 2.0,
+      "90%": 8.0,
+      "99%": 35.0,
+      "99.9%": 90.0,
+      "max": 6977.0
+    },
+    "sum_click_min": 1.0,
+    "sum_click_zeros": 0,
+    "info_dtypes": {
+      "code_module": "object",
+      "code_presentation": "object",
+      "id_student": "int64",
+      "gender": "object",
+      "region": "object",
+      "highest_education": "object",
+      "imd_band": "object",
+      "age_band": "object",
+      "num_of_prev_attempts": "int64",
+      "studied_credits": "int64",
+      "disability": "object",
+      "final_result": "object"
+    },
+    "notes": "Exact-duplicate rows dropped per counts above; no other rows removed. VLE negative dates (=pre-start activity) kept and reported separately. No winsorization; log scale used for plots."
+  },
+  "N_students_rows": 32593,
+  "overall": {
+    "n": 32593,
+    "withdrawn_n": 10156,
+    "withdrawn_rate": 0.3116006504464149
+  },
+  "withdrawn_by_age_band": {
+    "0-35": {
+      "sum": 7381,
+      "count": 22944,
+      "rate": 0.3217
+    },
+    "35-55": {
+      "sum": 2721,
+      "count": 9433,
+      "rate": 0.2885
+    },
+    "55<=": {
+      "sum": 54,
+      "count": 216,
+      "rate": 0.25
+    }
+  },
+  "youth_vs_mid_vs_old": {
+    "0-35": [
+      7381,
+      22944,
+      0.3216963040446304
+    ],
+    "35-55": [
+      2721,
+      9433,
+      0.2884554224530902
+    ],
+    "55+": [
+      54,
+      216,
+      0.25
+    ]
+  },
+  "by_module": {
+    "CCC": {
+      "sum": 1975,
+      "count": 4434,
+      "rate": 0.4454
+    },
+    "DDD": {
+      "sum": 2250,
+      "count": 6272,
+      "rate": 0.3587
+    },
+    "FFF": {
+      "sum": 2403,
+      "count": 7762,
+      "rate": 0.3096
+    },
+    "BBB": {
+      "sum": 2388,
+      "count": 7909,
+      "rate": 0.3019
+    },
+    "EEE": {
+      "sum": 722,
+      "count": 2934,
+      "rate": 0.2461
+    },
+    "AAA": {
+      "sum": 126,
+      "count": 748,
+      "rate": 0.1684
+    },
+    "GGG": {
+      "sum": 292,
+      "count": 2534,
+      "rate": 0.1152
+    }
+  },
+  "by_presentation": {
+    "2014J": {
+      "sum": 3826,
+      "count": 11260,
+      "rate": 0.3398
+    },
+    "2014B": {
+      "sum": 2613,
+      "count": 7804,
+      "rate": 0.3348
+    },
+    "2013B": {
+      "sum": 1348,
+      "count": 4684,
+      "rate": 0.2878
+    },
+    "2013J": {
+      "sum": 2369,
+      "count": 8845,
+      "rate": 0.2678
+    }
+  },
+  "by_gender": {
+    "M": {
+      "sum": 5670,
+      "count": 17875,
+      "rate": 0.3172
+    },
+    "F": {
+      "sum": 4486,
+      "count": 14718,
+      "rate": 0.3048
+    }
+  },
+  "by_education": {
+    "No Formal quals": {
+      "sum": 149,
+      "count": 347,
+      "rate": 0.4294
+    },
+    "Lower Than A Level": {
+      "sum": 4620,
+      "count": 13158,
+      "rate": 0.3511
+    },
+    "A Level or Equivalent": {
+      "sum": 4030,
+      "count": 14045,
+      "rate": 0.2869
+    },
+    "HE Qualification": {
+      "sum": 1283,
+      "count": 4730,
+      "rate": 0.2712
+    },
+    "Post Graduate Qualification": {
+      "sum": 74,
+      "count": 313,
+      "rate": 0.2364
+    }
+  },
+  "by_imd": {
+    "0-10%": {
+      "sum": 1231,
+      "count": 3311,
+      "rate": 0.3718
+    },
+    "20-30%": {
+      "sum": 1321,
+      "count": 3654,
+      "rate": 0.3615
+    },
+    "10-20": {
+      "sum": 1246,
+      "count": 3516,
+      "rate": 0.3544
+    },
+    "40-50%": {
+      "sum": 1042,
+      "count": 3256,
+      "rate": 0.32
+    },
+    "30-40%": {
+      "sum": 1095,
+      "count": 3539,
+      "rate": 0.3094
+    },
+    "60-70%": {
+      "sum": 859,
+      "count": 2905,
+      "rate": 0.2957
+    },
+    "50-60%": {
+      "sum": 899,
+      "count": 3124,
+      "rate": 0.2878
+    },
+    "80-90%": {
+      "sum": 774,
+      "count": 2762,
+      "rate": 0.2802
+    },
+    "70-80%": {
+      "sum": 797,
+      "count": 2879,
+      "rate": 0.2768
+    },
+    "90-100%": {
+      "sum": 656,
+      "count": 2536,
+      "rate": 0.2587
+    },
+    "?": {
+      "sum": 236,
+      "count": 1111,
+      "rate": 0.2124
+    }
+  },
+  "by_credits": {
+    "655": {
+      "sum": 1,
+      "count": 1,
+      "rate": 1.0
+    },
+    "390": {
+      "sum": 1,
+      "count": 1,
+      "rate": 1.0
+    },
+    "255": {
+      "sum": 1,
+      "count": 1,
+      "rate": 1.0
+    },
+    "235": {
+      "sum": 1,
+      "count": 1,
+      "rate": 1.0
+    },
+    "315": {
+      "sum": 1,
+      "count": 1,
+      "rate": 1.0
+    },
+    "205": {
+      "sum": 2,
+      "count": 2,
+      "rate": 1.0
+    },
+    "175": {
+      "sum": 1,
+      "count": 1,
+      "rate": 1.0
+    },
+    "345": {
+      "sum": 1,
+      "count": 1,
+      "rate": 1.0
+    },
+    "355": {
+      "sum": 1,
+      "count": 1,
+      "rate": 1.0
+    },
+    "370": {
+      "sum": 1,
+      "count": 1,
+      "rate": 1.0
+    },
+    "480": {
+      "sum": 1,
+      "count": 1,
+      "rate": 1.0
+    },
+    "585": {
+      "sum": 1,
+      "count": 1,
+      "rate": 1.0
+    },
+    "400": {
+      "sum": 2,
+      "count": 2,
+      "rate": 1.0
+    },
+    "540": {
+      "sum": 1,
+      "count": 1,
+      "rate": 1.0
+    },
+    "330": {
+      "sum": 10,
+      "count": 12,
+      "rate": 0.8333
+    },
+    "240": {
+      "sum": 150,
+      "count": 220,
+      "rate": 0.6818
+    },
+    "280": {
+      "sum": 2,
+      "count": 3,
+      "rate": 0.6667
+    },
+    "105": {
+      "sum": 8,
+      "count": 13,
+      "rate": 0.6154
+    },
+    "115": {
+      "sum": 3,
+      "count": 5,
+      "rate": 0.6
+    },
+    "210": {
+      "sum": 101,
+      "count": 169,
+      "rate": 0.5976
+    },
+    "270": {
+      "sum": 25,
+      "count": 45,
+      "rate": 0.5556
+    },
+    "220": {
+      "sum": 5,
+      "count": 9,
+      "rate": 0.5556
+    },
+    "300": {
+      "sum": 16,
+      "count": 29,
+      "rate": 0.5517
+    },
+    "180": {
+      "sum": 438,
+      "count": 830,
+      "rate": 0.5277
+    },
+    "310": {
+      "sum": 1,
+      "count": 2,
+      "rate": 0.5
+    },
+    "85": {
+      "sum": 2,
+      "count": 4,
+      "rate": 0.5
+    },
+    "170": {
+      "sum": 3,
+      "count": 6,
+      "rate": 0.5
+    },
+    "360": {
+      "sum": 3,
+      "count": 6,
+      "rate": 0.5
+    },
+    "135": {
+      "sum": 16,
+      "count": 35,
+      "rate": 0.4571
+    },
+    "150": {
+      "sum": 344,
+      "count": 769,
+      "rate": 0.4473
+    },
+    "120": {
+      "sum": 2549,
+      "count": 6328,
+      "rate": 0.4028
+    },
+    "100": {
+      "sum": 11,
+      "count": 30,
+      "rate": 0.3667
+    },
+    "90": {
+      "sum": 1145,
+      "count": 3144,
+      "rate": 0.3642
+    },
+    "110": {
+      "sum": 4,
+      "count": 11,
+      "rate": 0.3636
+    },
+    "130": {
+      "sum": 13,
+      "count": 38,
+      "rate": 0.3421
+    },
+    "225": {
+      "sum": 1,
+      "count": 3,
+      "rate": 0.3333
+    },
+    "200": {
+      "sum": 1,
+      "count": 3,
+      "rate": 0.3333
+    },
+    "190": {
+      "sum": 2,
+      "count": 6,
+      "rate": 0.3333
+    },
+    "95": {
+      "sum": 1,
+      "count": 3,
+      "rate": 0.3333
+    },
+    "55": {
+      "sum": 1,
+      "count": 3,
+      "rate": 0.3333
+    },
+    "75": {
+      "sum": 33,
+      "count": 108,
+      "rate": 0.3056
+    },
+    "50": {
+      "sum": 2,
+      "count": 7,
+      "rate": 0.2857
+    },
+    "60": {
+      "sum": 4571,
+      "count": 16751,
+      "rate": 0.2729
+    },
+    "195": {
+      "sum": 3,
+      "count": 11,
+      "rate": 0.2727
+    },
+    "70": {
+      "sum": 23,
+      "count": 96,
+      "rate": 0.2396
+    },
+    "80": {
+      "sum": 6,
+      "count": 26,
+      "rate": 0.2308
+    },
+    "45": {
+      "sum": 8,
+      "count": 36,
+      "rate": 0.2222
+    },
+    "165": {
+      "sum": 2,
+      "count": 9,
+      "rate": 0.2222
+    },
+    "160": {
+      "sum": 3,
+      "count": 14,
+      "rate": 0.2143
+    },
+    "140": {
+      "sum": 1,
+      "count": 5,
+      "rate": 0.2
+    },
+    "40": {
+      "sum": 4,
+      "count": 22,
+      "rate": 0.1818
+    },
+    "30": {
+      "sum": 628,
+      "count": 3749,
+      "rate": 0.1675
+    },
+    "145": {
+      "sum": 1,
+      "count": 7,
+      "rate": 0.1429
+    },
+    "215": {
+      "sum": 0,
+      "count": 1,
+      "rate": 0.0
+    },
+    "420": {
+      "sum": 0,
+      "count": 1,
+      "rate": 0.0
+    },
+    "430": {
+      "sum": 0,
+      "count": 1,
+      "rate": 0.0
+    },
+    "155": {
+      "sum": 0,
+      "count": 1,
+      "rate": 0.0
+    },
+    "65": {
+      "sum": 0,
+      "count": 1,
+      "rate": 0.0
+    },
+    "325": {
+      "sum": 0,
+      "count": 1,
+      "rate": 0.0
+    },
+    "630": {
+      "sum": 0,
+      "count": 1,
+      "rate": 0.0
+    },
+    "250": {
+      "sum": 0,
+      "count": 3,
+      "rate": 0.0
+    }
+  },
+  "by_prev_attempts": {
+    "6": {
+      "sum": 2,
+      "count": 4,
+      "rate": 0.5
+    },
+    "5": {
+      "sum": 5,
+      "count": 13,
+      "rate": 0.3846
+    },
+    "3": {
+      "sum": 53,
+      "count": 142,
+      "rate": 0.3732
+    },
+    "2": {
+      "sum": 247,
+      "count": 675,
+      "rate": 0.3659
+    },
+    "4": {
+      "sum": 14,
+      "count": 39,
+      "rate": 0.359
+    },
+    "1": {
+      "sum": 1150,
+      "count": 3299,
+      "rate": 0.3486
+    },
+    "0": {
+      "sum": 8685,
+      "count": 28421,
+      "rate": 0.3056
+    }
+  },
+  "engagement": {
+    "total_clicks_overall": {
+      "mean": 1176.4201822477219,
+      "median": 575.0,
+      "std": 1649.137940728935,
+      "q25": 134.0,
+      "q75": 1527.0,
+      "n": 32593
+    },
+    "total_clicks_youth": {
+      "mean": 1037.9111314504883,
+      "median": 503.0,
+      "std": 1447.3967391728627,
+      "q25": 115.0,
+      "q75": 1370.0,
+      "n": 22944
+    },
+    "total_clicks_rest": {
+      "mean": 1505.7757280547207,
+      "median": 776.0,
+      "std": 2012.800294455521,
+      "q25": 209.0,
+      "q75": 1991.0,
+      "n": 9649
+    },
+    "active_days_overall": {
+      "mean": 55.47568496302887,
+      "median": 40.0,
+      "std": 54.515290339865885,
+      "q25": 11.0,
+      "q75": 85.0,
+      "n": 32593
+    },
+    "active_days_youth": {
+      "mean": 51.19460425383542,
+      "median": 36.0,
+      "std": 50.88836835403616,
+      "q25": 9.0,
+      "q75": 79.0,
+      "n": 22944
+    },
+    "active_days_rest": {
+      "mean": 65.65550834283346,
+      "median": 49.0,
+      "std": 61.10720138514567,
+      "q25": 14.0,
+      "q75": 102.0,
+      "n": 9649
+    },
+    "early14_youth": {
+      "mean": 100.22533124128313,
+      "median": 49.0,
+      "std": 148.9592699351594,
+      "q25": 6.0,
+      "q75": 136.0,
+      "n": 22944
+    },
+    "early14_rest": {
+      "mean": 142.81179396828688,
+      "median": 69.0,
+      "std": 209.41602948595892,
+      "q25": 11.0,
+      "q75": 192.0,
+      "n": 9649
+    },
+    "early30_youth": {
+      "mean": 216.6651847977685,
+      "median": 127.0,
+      "std": 282.8069921229004,
+      "q25": 28.0,
+      "q75": 299.0,
+      "n": 22944
+    },
+    "early30_rest": {
+      "mean": 303.3430407296093,
+      "median": 173.0,
+      "std": 404.8024299715366,
+      "q25": 39.0,
+      "q75": 411.0,
+      "n": 9649
+    },
+    "by_final_result": {
+      "Distinction": {
+        "mean": 2574.425925925926,
+        "median": 1819.0,
+        "std": 2347.754179536562,
+        "q25": 905.75,
+        "q75": 3634.5,
+        "n": 3024
+      },
+      "Fail": {
+        "mean": 631.7841747022121,
+        "median": 305.5,
+        "std": 945.0857231928425,
+        "q25": 93.0,
+        "q75": 766.0,
+        "n": 7052
+      },
+      "Pass": {
+        "mean": 1861.9999191003965,
+        "median": 1294.0,
+        "std": 1811.968617809249,
+        "q25": 655.0,
+        "q75": 2488.0,
+        "n": 12361
+      },
+      "Withdrawn": {
+        "mean": 303.90665616384405,
+        "median": 85.0,
+        "std": 591.6167256966972,
+        "q25": 0.0,
+        "q75": 360.0,
+        "n": 10156
+      }
+    }
+  },
+  "zero_click": {
+    "n_zero_click_students": 3365,
+    "pct_zero": 10.32
+  },
+  "funnel": {
+    "registered": 32593,
+    "vle_active": 29228,
+    "tma1_submitted": 18646,
+    "pass_distinction": 15385
+  },
+  "funnel_rates": {
+    "vle_active_of_registered": 0.8967569723560274,
+    "tma1_of_registered": 0.5720860307427975,
+    "tma1_of_active": 0.6379499110442042,
+    "pass_of_registered": 0.47203387230386895,
+    "pass_of_tma1": 0.8251099431513461
+  },
+  "funnel_youth": {
+    "youth_registered": 22944,
+    "youth_vle_active": 20471,
+    "youth_tma1": 12768,
+    "youth_pass": 10332
+  },
+  "funnel_rest": {
+    "rest_registered": 9649,
+    "rest_vle_active": 8757,
+    "rest_tma1": 5878,
+    "rest_pass": 5053
+  },
+  "segmentation": {
+    "youth_n": 22944,
+    "rest_n": 9649,
+    "youth_withdrawn_rate": 0.3216963040446304,
+    "rest_withdrawn_rate": 0.28759456938542854,
+    "youth_final_result": {
+      "Pass": 0.3691,
+      "Withdrawn": 0.3217,
+      "Fail": 0.228,
+      "Distinction": 0.0812
+    },
+    "rest_final_result": {
+      "Pass": 0.4034,
+      "Withdrawn": 0.2876,
+      "Fail": 0.1887,
+      "Distinction": 0.1203
+    },
+    "youth_pass_rate": 0.4503138075313807,
+    "rest_pass_rate": 0.5236812104881334
+  },
+  "test_a_chi2_youth_withdrawn": {
+    "name": "chi-square Withdrawn(yes/no) x youth(yes/no)",
+    "H0": "withdrawal independent of youth status",
+    "H1": "withdrawal associated with youth status",
+    "contingency": {
+      "0": {
+        "0": 6874,
+        "1": 15563
+      },
+      "1": {
+        "0": 2775,
+        "1": 7381
+      }
+    },
+    "chi2": 36.66606473310619,
+    "dof": 1,
+    "p": 1.4019887953441304e-09,
+    "cramers_V": 0.033540534722788354,
+    "diff_youth_minus_rest": 0.034101734659201854,
+    "CI95": [
+      0.023234043277625654,
+      0.044969426040778054
+    ],
+    "cohens_h": 0.0741189360019614,
+    "alpha": 0.05,
+    "reject_H0": true
+  },
+  "test_b_mannwhitney_clicks": {
+    "name": "Mann-Whitney U total_clicks completed(Pass/Distinction) vs Withdrawn",
+    "choice_justification": "clicks strongly right-skewed (skew=2.51/5.84); Shapiro on n=5000 subsamples p_c=6.24e-64, p_w=2.25e-80 -> normality rejected, rank test used",
+    "H0": "equal distributions of total clicks",
+    "H1": "distributions differ",
+    "n_completed": 15385,
+    "n_withdrawn": 10156,
+    "median_completed": 1372.0,
+    "median_withdrawn": 85.0,
+    "U": 142419720.0,
+    "p": 0.0,
+    "rank_biserial_r": -0.822971715978861,
+    "alpha": 0.05,
+    "reject_H0": true
+  },
+  "test_c_ztest_passrate": {
+    "name": "two-proportion z-test Pass/Distinction rate youth vs rest",
+    "H0": "equal pass rates",
+    "H1": "pass rates differ",
+    "youth_pass": [
+      10332,
+      22944,
+      0.4503138075313807
+    ],
+    "rest_pass": [
+      5053,
+      9649,
+      0.5236812104881334
+    ],
+    "z": -12.112313019769967,
+    "p": 0.0,
+    "diff": -0.0733674029567527,
+    "CI95": [
+      -0.08523144307643031,
+      -0.06150336283707509
+    ],
+    "cohens_h": -0.1469168103376386,
+    "alpha": 0.05,
+    "reject_H0": true
+  },
+  "test_extra_edu_chi2": {
+    "name": "chi-square Fail+Withdrawn vs Pass+Distinction x highest_education",
+    "chi2": 737.2452712890594,
+    "dof": 4,
+    "p": 2.9990381783582765e-158,
+    "cramers_V": 0.15039861243480063,
+    "reject_H0": true
+  },
+  "logreg_withdrawn": {
+    "n": 32593,
+    "withdrawn_rate": 0.3116006504464149,
+    "date_registration_NA_filled_median": 45,
+    "features": [
+      "youth_0-35",
+      "studied_credits(std)",
+      "num_of_prev_attempts(std)",
+      "log_early30(std)",
+      "ad30(std)",
+      "date_registration(std)",
+      "gender_M",
+      "highest_education_HE Qualification",
+      "highest_education_Lower Than A Level",
+      "highest_education_No Formal quals",
+      "highest_education_Post Graduate Qualification",
+      "imd_band_10-20",
+      "imd_band_20-30%",
+      "imd_band_30-40%",
+      "imd_band_40-50%",
+      "imd_band_50-60%",
+      "imd_band_60-70%",
+      "imd_band_70-80%",
+      "imd_band_80-90%",
+      "imd_band_90-100%",
+      "imd_band_?"
+    ],
+    "numeric_standardized": true,
+    "note": "OR for standardized numerics = per +1 SD; youth/gender/education/IMD dummies unscaled",
+    "AUC_train": 0.7598308575150963,
+    "AUC_test": 0.7669355274001638,
+    "intercept": -1.1341396364022749,
+    "coefficients": [
+      {
+        "feature": "log_early30(std)",
+        "coef": -0.8302596377072806,
+        "odds_ratio": 0.43593608618072216
+      },
+      {
+        "feature": "gender_M",
+        "coef": 0.41703378858598994,
+        "odds_ratio": 1.5174537846865694
+      },
+      {
+        "feature": "studied_credits(std)",
+        "coef": 0.40855447737881484,
+        "odds_ratio": 1.5046412194349317
+      },
+      {
+        "feature": "highest_education_No Formal quals",
+        "coef": 0.32334245177256427,
+        "odds_ratio": 1.3817384486753908
+      },
+      {
+        "feature": "imd_band_?",
+        "coef": -0.2517593414057891,
+        "odds_ratio": 0.7774318112044437
+      },
+      {
+        "feature": "highest_education_Lower Than A Level",
+        "coef": 0.21975454437179168,
+        "odds_ratio": 1.245770911574713
+      },
+      {
+        "feature": "imd_band_90-100%",
+        "coef": -0.21009745034270108,
+        "odds_ratio": 0.810505258106389
+      },
+      {
+        "feature": "ad30(std)",
+        "coef": -0.1949493457501196,
+        "odds_ratio": 0.822876339184052
+      },
+      {
+        "feature": "date_registration(std)",
+        "coef": -0.1925352057518911,
+        "odds_ratio": 0.8248652776900999
+      },
+      {
+        "feature": "imd_band_80-90%",
+        "coef": -0.18408674575705022,
+        "odds_ratio": 0.8318636400555474
+      },
+      {
+        "feature": "imd_band_50-60%",
+        "coef": -0.18097820124181296,
+        "odds_ratio": 0.8344535485486538
+      },
+      {
+        "feature": "imd_band_70-80%",
+        "coef": -0.14805475629473946,
+        "odds_ratio": 0.8623838927025924
+      },
+      {
+        "feature": "highest_education_Post Graduate Qualification",
+        "coef": 0.1441045700154375,
+        "odds_ratio": 1.155004881088455
+      },
+      {
+        "feature": "num_of_prev_attempts(std)",
+        "coef": -0.10970526499498123,
+        "odds_ratio": 0.8960982078886977
+      },
+      {
+        "feature": "imd_band_30-40%",
+        "coef": -0.08934042975451001,
+        "odds_ratio": 0.9145341859262431
+      },
+      {
+        "feature": "imd_band_20-30%",
+        "coef": 0.07215799948216439,
+        "odds_ratio": 1.0748251524661474
+      },
+      {
+        "feature": "imd_band_60-70%",
+        "coef": -0.06964860248044964,
+        "odds_ratio": 0.9327215183543462
+      },
+      {
+        "feature": "youth_0-35",
+        "coef": -0.06112356182734103,
+        "odds_ratio": 0.9407069971190235
+      },
+      {
+        "feature": "imd_band_40-50%",
+        "coef": -0.04453362333317011,
+        "odds_ratio": 0.9564434407365052
+      },
+      {
+        "feature": "imd_band_10-20",
+        "coef": -0.02920527773016163,
+        "odds_ratio": 0.9712170747655703
+      },
+      {
+        "feature": "highest_education_HE Qualification",
+        "coef": 0.021282913470138554,
+        "odds_ratio": 1.0215110099851166
+      }
+    ],
+    "conclusion": "Largest-|coef| features (see sorted list) are most strongly associated with withdrawal; sign>0 raises odds."
+  },
+  "figures": [
+    "01_withdrawn_rate_ageband.png",
+    "02_withdrawn_rate_module.png",
+    "03_total_clicks_log.png",
+    "04_weekly_activity.png",
+    "05_funnel.png",
+    "06_logreg_coefs.png",
+    "07_withdrawn_rate_presentation.png"
+  ],
+  "alpha": 0.05,
+  "seed": 42
+}

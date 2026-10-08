@@ -1,0 +1,14 @@
+# ---> Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+# ---> Data (исключена из репозитория, см. README)
+data/
+# ---> Исключено по просьбе владельца
+Промт для исследования молодежи.md
+Исследование_удержание_молодежи_OULAD.md
+# ---> macOS
+.DS_Store
+# ---> Jupyter
+.ipynb_checkpoints/
